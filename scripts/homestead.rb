@@ -268,5 +268,12 @@ class Homestead
         ]
       end
     end
+
+    # Install MongoDB If Necessary
+    if settings.has_key?("mongodb") && settings["mongodb"]
+      config.vm.provision "shell" do |s|
+        s.path = scriptDir + "/install-mongo.sh"
+      end
+    end
   end
 end

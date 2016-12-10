@@ -16,6 +16,14 @@ folders:
 sites:
     - map: homestead.app
       to: /home/vagrant/Code/Laravel/public
+    - map: xplor.asia.app
+      to: /home/vagrant/Code/xplor.asia/public
+    - map: api.xplor.asia.app
+      to: /home/vagrant/Code/xplor.asia/public
+    - map: account.xplor.asia.app
+      to: /home/vagrant/Code/xplor.asia/public
+    - map: cms.xplor.asia.app
+      to: /home/vagrant/Code/xplor.asia/public
 
 databases:
     - homestead
