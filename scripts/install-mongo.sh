@@ -33,7 +33,7 @@ apt-get install -y libcurl4-openssl-dev pkg-config;
 apt-get install -y libsasl2-dev;
 
 echo "Installing PHP7 mongoDb extension";
-sudo pecl install mongodb;
+sudo pecl install mongodb-1.1.9;
 
 echo "adding the extension to your php.ini file";
 sudo echo  "extension = mongodb.so" >> /etc/php/7.1/cli/php.ini;
