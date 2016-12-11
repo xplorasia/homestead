@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Check If Maria Has Been Installed
+# Check If MongoDB Has Been Installed
 
 if [ -f /home/vagrant/.mongo ]
 then
@@ -74,8 +74,6 @@ mongo admin < /home/vagrant/setupMongo.js
 echo "configuring /etc/mongod.conf";
 sudo sed -i "s/  bindIp: 127.0.0.1/# bindIp: 127.0.0.1/g" /etc/mongod.conf
 sudo sed -i "s/#security:/security:/g" /etc/mongod.conf
-a="\ \ authorization: enabled"
-sudo sed -i "/security:/a ${a}" /etc/mongod.conf
 
 echo "restarting mongodb after enabling security";
 sudo service mongodb restart;
